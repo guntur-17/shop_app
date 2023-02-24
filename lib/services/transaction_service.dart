@@ -5,6 +5,7 @@ class FirestoreTransaction {
   Stream<List<TransactionHeader>> getAllTransaction() {
     return FirebaseFirestore.instance
         .collection("transaction")
+        .orderBy("date", descending: false)
         .snapshots()
         .map((event) {
       return event.docs.map((e) => TransactionHeader.fromSnapshot(e)).toList();
