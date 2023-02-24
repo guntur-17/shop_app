@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "620720257412",
+    "firebase_url": "https://wingstestapp-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wingstestapp",
+    "storage_bucket": "wingstestapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620720257412:android:4d07163bddf28c68ba45d1",
+        "android_client_info": {
+          "package_name": "com.example.wings_test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620720257412-7gb2tj3dba5npvmphdjsbdjo67mmptg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3LbI2IWzLVIefmNNqg-4yLUNYK4i9VSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620720257412-7gb2tj3dba5npvmphdjsbdjo67mmptg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
