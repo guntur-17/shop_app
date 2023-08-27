@@ -1,15 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/async.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:wings_test_app/controller/product_controller.dart';
 import 'package:wings_test_app/instance.dart';
-import 'package:wings_test_app/pages/login.dart';
 import 'package:wings_test_app/style/theme.dart';
 import 'package:wings_test_app/widget/item.dart';
 
