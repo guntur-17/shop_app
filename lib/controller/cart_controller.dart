@@ -15,6 +15,7 @@ class CartController extends GetxController {
   List<Map<String, dynamic>> transactionDetail = [];
   CollectionReference transaction = firebaseFirestore.collection('transaction');
 
+  //Fungsi tambah produk
   addProduct(Product product) {
     if (_products.containsKey(product)) {
       _products[product] += 1;
@@ -25,6 +26,7 @@ class CartController extends GetxController {
 
   get products => _products;
 
+  //Fungsi kurangi kuantitas produk
   removeProduct(Product product) {
     if (_products.containsKey(product) && _products[product] == 1) {
       _products.removeWhere((key, value) => key == product);
@@ -33,14 +35,17 @@ class CartController extends GetxController {
     }
   }
 
+  //Fungsi hapus produk
   deleteProduct(Product product) {
     _products.removeWhere((key, value) => key == product);
   }
 
+  //Fungsi all clear
   deleteAllProducts() {
     _products.clear();
   }
 
+  //Fungsi upload ke firestore
   Future<void> uploadDatastore() async {
     await listingData();
     return transaction
@@ -56,6 +61,7 @@ class CartController extends GetxController {
         .catchError((error) => print("Transaction data couldn't be added."));
   }
 
+  //Fungsi memasukkan data listing ke array untuk masuk ke firestore
   listingData() {
     for (int index = 0; index < cartController.products.keys.length; index++) {
       transactionDetail.add({

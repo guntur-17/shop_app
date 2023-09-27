@@ -1,7 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:uuid/uuid.dart';
 import 'package:wings_test_app/instance.dart';
 import 'package:wings_test_app/pages/summary.dart';
 import 'package:wings_test_app/style/theme.dart';
@@ -90,6 +88,17 @@ class _CartPageState extends State<CartPage> {
             style: whiteInterTextStyle.copyWith(fontSize: 16),
           ),
         ),
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 75.0),
+          child: FloatingActionButton.small(
+            onPressed: () {
+              cartController.deleteAllProducts();
+            },
+            backgroundColor: Colors.deepPurple,
+            child: const Icon(Icons.delete),
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         body: LayoutBuilder(
           builder: (context, constraint) {
             return Form(
